@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMatch | Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MentorMatch</h1>
+            <p>Join our community of mentors and mentees</p>
+        </header>
+        
+        <main class="auth-form">
+            <h2>Create Your Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password (min 8 characters)</label>
+                    <input type="password" id="regPassword" minlength="8" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regRole">I want to be a:</label>
+                    <select id="regRole" required>
+                        <option value="">Select role</option>
+                        <option value="mentor">Mentor</option>
+                        <option value="mentee">Mentee</option>
+                        <option value="both">Both</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="index.html">Login here</a></p>
+            <div id="registerError" class="error-message"></div>
+        </main>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

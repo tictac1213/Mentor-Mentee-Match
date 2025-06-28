@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMatch | Discover</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MentorMatch</div>
+            <div class="navbar-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">My Profile</a>
+                <a href="discover.html" class="active">Discover</a>
+                <a href="connections.html">Connections</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main>
+            <h1>Discover Mentors & Mentees</h1>
+            
+            <div class="discovery-filters">
+                <div class="filter-group">
+                    <label for="filterRole">Looking for:</label>
+                    <select id="filterRole">
+                        <option value="all">All</option>
+                        <option value="mentor">Mentors</option>
+                        <option value="mentee">Mentees</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterSkills">Skills/Interests:</label>
+                    <input type="text" id="filterSkills" placeholder="Enter skills or interests">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterAvailability">Availability:</label>
+                    <select id="filterAvailability">
+                        <option value="any">Any</option>
+                        <option value="weekday_mornings">Weekday Mornings</option>
+                        <option value="weekday_afternoons">Weekday Afternoons</option>
+                        <option value="weekday_evenings">Weekday Evenings</option>
+                        <option value="weekends">Weekends</option>
+                    </select>
+                </div>
+                
+                <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                <button id="resetFilters" class="btn btn-secondary">Reset</button>
+            </div>
+            
+            <div id="discoveryResults" class="profiles-grid">
+                <!-- Dynamically populated with JS -->
+            </div>
+        </main>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/discover.js"></script>
+</body>
+</html>

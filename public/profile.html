@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMatch | My Profile</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MentorMatch</div>
+            <div class="navbar-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html" class="active">My Profile</a>
+                <a href="discover.html">Discover</a>
+                <a href="connections.html">Connections</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main>
+            <h1>My Profile</h1>
+            
+            <form id="profileForm">
+                <div class="profile-section">
+                    <h2>Basic Information</h2>
+                    <div class="form-group">
+                        <label for="profileName">Full Name</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileRole">Primary Role</label>
+                        <select id="profileRole" required>
+                            <option value="mentor">Mentor</option>
+                            <option value="mentee">Mentee</option>
+                            <option value="both">Both</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileTitle">Professional Title</label>
+                        <input type="text" id="profileTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="profileBio">Bio</label>
+                        <textarea id="profileBio" rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <h2>Skills & Expertise</h2>
+                    <div class="form-group">
+                        <label>Areas of Expertise (as Mentor)</label>
+                        <div class="tags-container" id="mentorSkills">
+                            <!-- Dynamically populated with JS -->
+                        </div>
+                        <input type="text" id="newMentorSkill" placeholder="Add skill">
+                        <button type="button" class="btn-small" id="addMentorSkill">Add</button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Areas of Interest (as Mentee)</label>
+                        <div class="tags-container" id="menteeInterests">
+                            <!-- Dynamically populated with JS -->
+                        </div>
+                        <input type="text" id="newMenteeInterest" placeholder="Add interest">
+                        <button type="button" class="btn-small" id="addMenteeInterest">Add</button>
+                    </div>
+                </div>
+                
+                <div class="profile-section">
+                    <h2>Availability</h2>
+                    <div class="form-group">
+                        <label>Preferred Meeting Times</label>
+                        <div class="availability-options">
+                            <label><input type="checkbox" name="availability" value="weekday_mornings"> Weekday Mornings</label>
+                            <label><input type="checkbox" name="availability" value="weekday_afternoons"> Weekday Afternoons</label>
+                            <label><input type="checkbox" name="availability" value="weekday_evenings"> Weekday Evenings</label>
+                            <label><input type="checkbox" name="availability" value="weekends"> Weekends</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="meetingFrequency">Preferred Meeting Frequency</label>
+                        <select id="meetingFrequency">
+                            <option value="weekly">Weekly</option>
+                            <option value="biweekly">Bi-weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="as_needed">As needed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Save Profile</button>
+                <div id="profileSuccess" class="success-message"></div>
+            </form>
+        </main>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

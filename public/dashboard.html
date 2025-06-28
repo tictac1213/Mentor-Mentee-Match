@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMatch | Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MentorMatch</div>
+            <div class="navbar-links">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="profile.html">My Profile</a>
+                <a href="discover.html">Discover</a>
+                <a href="connections.html">Connections</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main>
+            <div class="welcome-banner">
+                <h1>Welcome, <span id="userName"></span>!</h1>
+                <p id="userRole"></p>
+            </div>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Complete Your Profile</h3>
+                    <p id="profileCompletion">Profile 20% complete</p>
+                    <a href="profile.html" class="btn btn-primary">Edit Profile</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Suggested Matches</h3>
+                    <div id="suggestedMatches" class="matches-container">
+                        <!-- Dynamically populated with JS -->
+                    </div>
+                    <a href="discover.html" class="btn btn-secondary">View All</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Connection Requests</h3>
+                    <div id="connectionRequests" class="requests-container">
+                        <!-- Dynamically populated with JS -->
+                    </div>
+                    <a href="connections.html" class="btn btn-secondary">Manage Connections</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <!-- <script src="/js/profile.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorMatch | Connections</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MentorMatch</div>
+            <div class="navbar-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">My Profile</a>
+                <a href="discover.html">Discover</a>
+                <a href="connections.html" class="active">Connections</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main>
+            <h1>My Connections</h1>
+            
+            <div class="connections-tabs">
+                <button class="tab-btn active" data-tab="active">Active Connections</button>
+                <button class="tab-btn" data-tab="requests">Connection Requests</button>
+                <button class="tab-btn" data-tab="sent">Sent Requests</button>
+            </div>
+            
+            <div id="activeConnections" class="tab-content active">
+                <h2>Active Mentorships</h2>
+                <div id="activeConnectionsList" class="connections-list">
+                    <!-- Dynamically populated with JS -->
+                </div>
+            </div>
+            
+            <div id="requestsConnections" class="tab-content">
+                <h2>Pending Requests</h2>
+                <div id="requestsList" class="connections-list">
+                    <!-- Dynamically populated with JS -->
+                </div>
+            </div>
+            
+            <div id="sentConnections" class="tab-content">
+                <h2>Sent Requests</h2>
+                <div id="sentRequestsList" class="connections-list">
+                    <!-- Dynamically populated with JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/connections.js"></script>
+</body>
+</html>
