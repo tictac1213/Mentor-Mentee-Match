@@ -19,7 +19,6 @@ A full-stack web application to facilitate mentorship by connecting mentors and 
 
 - User authentication (Login/Signup)
 - Mentor and Mentee profile creation
-- Skill-based matching algorithm
 - Option to connect with suitable mentors/mentees
 - Responsive and clean user interface
 - Role-based redirection (mentor/mentee dashboards)
@@ -74,10 +73,9 @@ A full-stack web application to facilitate mentorship by connecting mentors and 
 
 ```
 Mentor-Mentee-Match/
+├── config/              # DB connection
 ├── public/              # Static frontend files
 ├── routes/              # Express route handlers
-├── controllers/         # Business logic
-├── models/              # SQL queries and database access
 ├── middleware/          # JWT and other middleware
 ├── .env                 # Environment variables
 ├── server.js            # Entry point
@@ -85,11 +83,6 @@ Mentor-Mentee-Match/
 └── README.md            # Project documentation
 ```
 
-## 🔒 Security Notes
-
-* Passwords are hashed using `bcrypt`
-* JWT used for stateless authentication
-* Sensitive config data managed using `.env` and `dotenv`
 
 ## 🤝 Contribution
 
